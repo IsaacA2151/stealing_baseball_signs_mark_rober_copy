@@ -24,7 +24,7 @@ def findSign(weights,actions):
     return actions[ind]
             
 
-'''actions = ['eye','mouth','nose','ear']
+actions = ['eye','mouth','nose','ear']
 seq = [['eye','mouth','ear'],
        ['eye','mouth','nose'],
        ['eye','nose','ear'],
@@ -33,24 +33,15 @@ seq = [['eye','mouth','ear'],
        ['ear','mouth'],
        ['ear','nose'],
        ['mouth','nose','ear'],
-       ['eye','nose','mouth']]'''
+       ['eye','nose','mouth']]
        
-actions = ['T','M','O','R','N','I','E','S','Y']
-seq = [['I','S','E','R','M','O','N'],
-       ['N','I','R','T','O','N','S'],
-       ['M','O','R','N','I','E','S'],
-       ['S','M','I','R','O','T','E'],
-       ['N','E','S','T','R','I','M'],
-       ['T','R','O','M','I','S','Y'],
-       ['M','E','R','T','O','Y','S'],
-       ['E','Y','N','O','M','I','T']]
+
 
 ############################################ Mouth means steal ############################################
 
 seqBin = seqToBin(actions,seq)
 
-#steal_or_not = np.array([1,1,0,1,0,1,0,1,1])
-steal_or_not = np.array([1,1,1,0,1,0,0,1])
+steal_or_not = np.array([1,1,0,1,0,1,0,1,1])
 weights = np.array([float(random.uniform(-1,1)) for i in range(len(actions))])
 alpha = 0.1
 
